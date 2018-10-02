@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - "./tests.sh:/usr/local/src/tests.sh"
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_SESSION_TOKEN
+    command: /bin/ash -c "/usr/local/src/tests.sh"
