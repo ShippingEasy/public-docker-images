@@ -18,4 +18,6 @@ ARG NODE_VERSION=8.11.4-r0
 RUN apk -Uuv add               \
       nodejs=$NODE_VERSION     \
       nodejs-dev=$NODE_VERSION \
+      npm=$NODE_VERSION        \
+      zip                      \
     && rm /var/cache/apk/*

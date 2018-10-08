@@ -45,6 +45,8 @@ assert "sops execution"  "ENC*" $(echo '{"a": 1}' > test.json && sops --encrypt 
 assert "aws-cli installation" "aws-cli/1.15.85*" "$(aws --version 2>&1)"
 assert "aws-cli + jq integration" "arn:aws:iam:*" "$(aws sts get-caller-identity | jq -r '.Arn')"
 assert "stacker installation" "stacker 1.4.1" "$(stacker --version 2>&1)"
+assert "git installation" "git version 2.18.0" "$(git --version)"
+assert "curl installation" "curl 7.61.1*" "$(curl --version)"
 
 echo
 echo "Done."

@@ -3,13 +3,14 @@ Docker image that provides common tools and structure for builds
 where the following is needed:
 
 * `bash` command: for scripting
+* [`aws` command](https://docs.aws.amazon.com/cli/latest/reference/): for
+  interacting with AWS services and resources
 * [`sops` command](https://github.com/mozilla/sops): for decrypting secrets
 * [`jq` command](https://stedolan.github.io/jq/manual/): for parsing aws
   responses
-* [`aws` command](https://docs.aws.amazon.com/cli/latest/reference/): for
-  interacting with AWS services and resources
 * [`stacker` command](https://github.com/cloudtools/stacker) for managing
   cloudformation stacks
+* [`git` command](): for collecting scm info, committing, tagging, etc...
 
 It also encourages the following:
 
@@ -26,6 +27,8 @@ It also encourages the following:
 | `jq`      | 1.6     |
 | `sops`    | 3.1.1   |
 | `stacker` | 1.4.1   |
+| `git`     | 2.18.0  |
+| `curl`    | 7.61.1  |
 
 ## Usage
 This image is built upon Alpine to keep size small.  By default, when run

@@ -12,16 +12,21 @@ following is needed:
   cloudformation stacks
 * [`node` command](): for running, testing, packaging, building, etc... nodejs
   apps
+* `zip` command: for creating source packages for AWS lambda, etc...
 
 ## Versions
 | command   | version |
 |-----------|---------|
+| `node`    | 8.11.4  |
+| `npm`     | 5.6.0   |
 | `bash`    | 4.4.19  |
 | `aws`     | 1.15.85 |
 | `jq`      | 1.6     |
 | `sops`    | 3.1.1   |
 | `stacker` | 1.4.1   |
-| `node`    | 8.11.4  |
+| `git`     | 2.18.0  |
+| `zip`     | 3.0     |
+| `curl`    | 7.61.1  |
 
 ## Testing the Image
 This assumes you have installed and set up

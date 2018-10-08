@@ -47,6 +47,9 @@ assert "aws-cli + jq integration" "arn:aws:iam:*" "$(aws sts get-caller-identity
 assert "stacker installation" "stacker 1.4.1" "$(stacker --version 2>&1)"
 assert "nodejs installation" "v8.*" "$(node --version)"
 assert "nodejs evaluation" "this is a test" "$(node -e 'console.log("this is a test");')"
+assert "npm installation" "5.6.0" "$(npm --version)"
+assert "git installation" "git version 2.18.0" "$(git --version)"
+assert "zip installation" "This is Zip 3.0*" "$(zip --version | grep 'This is Zip')"
 
 echo
 echo "Done."

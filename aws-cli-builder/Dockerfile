@@ -45,15 +45,15 @@ COPY --from=jq_installer /usr/lib/libonig.so.5 /usr/lib/libonig.so.5
 # Install sops
 COPY --from=sops_installer "/tmp/sops-*.linux" /usr/local/bin/sops
 
-# Install bash, common certs, python, aws cli & stacker
-RUN apk -Uuv add bash ca-certificates python py-pip  \
-    && pip install awscli==$AWS_CLI_VERSION          \
-    && pip install stacker==$STACKER_VERSION         \
-    && apk --purge -v del py-pip                     \
+# Install bash, git, common certs, python, aws cli & stacker
+RUN apk -Uuv add bash git ca-certificates python py-pip curl \
+    && pip install awscli==$AWS_CLI_VERSION                  \
+    && pip install stacker==$STACKER_VERSION                 \
+    && apk --purge -v del py-pip                             \
     && rm /var/cache/apk/*
 
 # Where to mount source code for builds
 WORKDIR /usr/local/src
 
-CMD /bin/ash
+CMD ["/bin/bash"]
 ################################################################################
