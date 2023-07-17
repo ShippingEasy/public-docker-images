@@ -1,3 +1,5 @@
+# THIS REPO IS NO LONGER MAINTAINED
+
 # public-docker-images
 Dockerfiles for images we are releasing publicly to dockerhub
 
