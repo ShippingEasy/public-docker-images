@@ -6,3 +6,5 @@ Dockerfiles for images we are releasing publicly to dockerhub
   secrets decryption, and others
 * [nodejs-aws-builder](nodejs-aws-builder/): image providing a nodejs runtime
   on top of all the goodness of the `aws-cli-builder`
+* [serverless-ruby](serverless-ruby/): image providing a ruby environment to
+  deploy serverless ruby projects
